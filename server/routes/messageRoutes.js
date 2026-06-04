@@ -3,7 +3,7 @@ const router = express.Router();
 const Message = require('../models/Message');
 const protect = require('../middleware/authMiddleware');
 
-// Get all messages for a room
+// Get all messages for a room — protected route
 router.get('/:room', protect, async (req, res) => {
   try {
     const messages = await Message.find({ room: req.params.room })

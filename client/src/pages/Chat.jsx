@@ -17,7 +17,9 @@ const Chat = () => {
   const messagesEndRef = useRef(null);
 
   useEffect(() => {
-    if (!user) { navigate('/'); return; }
+    if (!user) { navigate('/'); 
+      return;
+     }
 
     socket.emit('join_room', { room, username: user.username });
 
