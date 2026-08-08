@@ -21,6 +21,26 @@ const userSchema = new mongoose.Schema(
       required: true,
       minlength: 6,
     },
+    isVerified: {
+      type: Boolean,
+      default: false,
+    },
+    verificationOTP: {
+      type: String,
+    },
+    otpExpires: {
+      type: Date,
+    },
+    resetPasswordOTP: {
+      type: String,
+    },
+    resetPasswordExpires: {
+      type: Date,
+    },
+    avatarColor: {
+      type: String,
+      default: '#6366f1',
+    },
   },
   { timestamps: true }
 );
